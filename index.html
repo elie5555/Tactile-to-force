@@ -3,41 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blank Page</title>
+    <title>Research Project</title>
     <style>
+        /* General styling for the body */
         body {
-            text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
+
+        /* Container to center content and limit width */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Styling for the paragraph */
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Heading style */
+        h2 {
+            font-size: 24px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        /* Video container for centering */
         .video-container {
             display: flex;
             justify-content: center;
             margin-top: 20px;
         }
-        h2 {
-            margin-top: 30px;
+
+        /* Styling the link placeholder */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <p>
-        This page will soon host a link to the repository for the code associated with the article 
-        "<strong>Interaction force estimation for tactile sensor arrays: Toward tactile-based interaction control for robotic fingers</strong>". 
-        It will also provide a dataset for tactile sensor force calibration and some video demonstration on our robotic hardware.
-    </p>
+    <div class="container">
+        <p>
+            This page will soon host a link to the repository for the code associated with the article 
+            "<strong>Interaction force estimation for tactile sensor arrays: Toward tactile-based interaction control for robotic fingers</strong>". 
+            It will also provide a dataset for tactile sensor force calibration and some video demonstrations on our robotic hardware.
+        </p>
 
-    <!-- Title above the video -->
-    <h2>Video summary and demonstration</h2>
-
-    <!-- Centered YouTube video embed -->
-    <div class="video-container">
-        <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/0T4X4KM9T7s" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-</body>
-</html>
+        <!-- Title
