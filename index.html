@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Project</title>
+    <title>tactile2force</title> <!-- Updated page title -->
     <style>
         /* General styling for the body */
         body {
@@ -22,6 +22,7 @@
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            text-align: center;
         }
 
         /* Styling for the paragraph */
@@ -38,21 +39,12 @@
             margin-bottom: 20px;
         }
 
-        /* Video container for centering */
-        .video-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        /* Styling the link placeholder */
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        /* Styling for the iframe (video) */
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
         }
     </style>
 </head>
@@ -64,4 +56,16 @@
             It will also provide a dataset for tactile sensor force calibration and some video demonstrations on our robotic hardware.
         </p>
 
-        <!-- Title
+        <!-- Title above the video -->
+        <h2>Video Summary and Demonstration</h2>
+
+        <!-- Centered YouTube video embed -->
+        <iframe 
+            src="https://www.youtube.com/embed/0T4X4KM9T7s" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>
