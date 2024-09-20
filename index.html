@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blank Page</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <p>
@@ -12,13 +26,18 @@
         It will also provide a dataset for tactile sensor force calibration and some video demonstration on our robotic hardware.
     </p>
 
-    <!-- YouTube video embed -->
-    <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/0T4X4KM9T7s" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
+    <!-- Title above the video -->
+    <h2>Video summary and demonstration</h2>
+
+    <!-- Centered YouTube video embed -->
+    <div class="video-container">
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/0T4X4KM9T7s" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>
