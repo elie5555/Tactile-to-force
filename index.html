@@ -46,6 +46,21 @@
             height: 315px;
             border: none;
         }
+
+        /* Styling for the link */
+        .repo-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .repo-link:hover {
+            background-color: #004494; /* Darker shade on hover */
+        }
     </style>
 </head>
 <body>
@@ -55,19 +70,22 @@
             "<strong>Interaction force estimation for tactile sensor arrays: Toward tactile-based interaction control for robotic fingers</strong>". 
             It will also provide a dataset for tactile sensor force calibration and some video demonstrations on our robotic hardware.
         </p>
-        <!-- Title above the video -->
+        
+        <!-- Title above the dataset link -->
         <h2>Dataset and Models</h2>
-        <iframe 
-            https://github.com/elie5555/tactile2force>
-        </iframe>
+        <p>
+            You can access the dataset repository here: 
+            <a class="repo-link" href="https://github.com/elie5555/tactile2force" target="_blank">View Dataset Repository</a>
+        </p>
+        
         <!-- Title above the video -->
         <h2>Video Summary and Demonstration</h2>
 
         <!-- Centered YouTube video embed -->
         <iframe 
-            width="560" height="315" 
             src="https://www.youtube.com/embed/IEhZ3peVsO8?si=1IgST6og7ZhNa1Mc" 
-            title="YouTube video player" frameborder="0" 
+            title="YouTube video player" 
+            frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
