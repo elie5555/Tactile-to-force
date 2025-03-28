@@ -61,25 +61,50 @@
         .repo-link:hover {
             background-color: #004494; /* Darker shade on hover */
         }
+
+        .resource-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;  /* Increased from 40px to 80px */
+            margin: 30px 0;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="time-info">
+            Last updated: <span id="last-updated"></span><br>
+            Visitor timezone: <span id="timezone"></span>
+        </div>
         <p>
-            This page will soon host a link to the repository for the code associated with the article 
-            "<strong>Interaction force estimation for tactile sensor arrays: Toward tactile-based interaction control for robotic fingers</strong>". 
-            It will also provide a dataset for tactile sensor force calibration and some video demonstrations on our robotic hardware.
+            <h1>
+                Tactile-based force estimation for interaction control with robot fingers
+            </h1>
+            <br>
+                Elie Chelly, Andrea Cherubini, Philippe Fraisse, Faiz Ben Amar, Mahdi Khoramshahi
+            <br>
+            <div class="resource-links">
+                <a href="https://arxiv.org/abs/2411.13335" target="_blank">
+                    <img src="ressources/arxiv-logo.png" alt="arXiv" height="30">
+                </a>
+
+                <a href="https://github.com/elie5555/tactile2force" target="_blank">
+                    <img src="ressources/github-logo.png" alt="github" height="30">
+                </a>
+
+                <a href="https://www.youtube.com/embed/8SRNumo5mJ8?si=-7iy_MuDCOBZb2xz" target="_blank">
+                    <img src="ressources/youtube-logo.png" alt="YouTube" height="30">
+                </a>
+            </div>
+
         </p>
-        
-        <!-- Title above the dataset link -->
-        <h2>Dataset and Models</h2>
-        <p>
-            You can access the dataset repository here: 
-            <a class="repo-link" href="https://github.com/elie5555/tactile2force" target="_blank">View Dataset Repository</a>
-        </p>
-        
-        <!-- Title above the video -->
-        <h2>Video Summary and Demonstration</h2>
+
+        <p style="text-align: justify;">
+            <em>
+                Fine dexterous manipulation requires reactive control based on rich sensing of manipulator-object interactions. Tactile sensing arrays provide rich contact information across the manipulator's surface. However their implementation faces two main challenges: accurate force estimation across complex surfaces like robotic hands, and integration of these estimates into reactive control loops. We present a data-efficient calibration method that enables rapid, full-array force estimation across varying geometries, providing online feedback that accounts for non-linearities and deformation effects. Our force estimation model serves as feedback in an online closed-loop control system for interaction force tracking. The accuracy of our estimates is independently validated against measurements from a calibrated force-torque sensor. Using the Allegro Hand equipped with Xela uSkin sensors, we demonstrate precise force application through an admittance control loop running at 100Hz, achieving up to 0.12+/-0.08 [N] error margin-results that show promising potential for dexterous manipulation. 
+            </em>
+        </p>   
 
         <!-- Centered YouTube video embed -->
         <iframe 
@@ -90,6 +115,58 @@
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
         </iframe>
+
+        <h3>
+            This projet is supported and funded by:
+        </h3>
+
+        <div class="resource-links">
+            <a href="https://www.pepr-o2r.fr/" target="_blank">
+                <img src="ressources/pepr-o2r.png" alt="pepr-o2r" height="60">
+            </a>
+
+            <a href="https://anr.fr/" target="_blank">
+                <img src="ressources/anr.png" alt="anr" height="60">
+            </a>
+
+            <a href="https://www.isir.upmc.fr/" target="_blank">
+                <img src="ressources/isir.png" alt="isir" height="60">
+            </a>
+
+            <a href="https://www.lirmm.fr/" target="_blank">
+                <img src="ressources/lirmm.png" alt="lirmm" height="60">
+            </a>
+        </div>
+
     </div>
+
+
+    <script>
+        // Set your site's last update time (use your actual last update date)
+        const lastUpdateDate = new Date("2025-03-28T10:30:00Z"); // Replace with your actual update date/time
+        
+        // Function to display the last update time in visitor's timezone
+        function displayLastUpdate() {
+            // Format the date in the visitor's locale and timezone
+            const dateOptions = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit',
+                timeZoneName: 'short'
+            };
+            
+            const formattedDate = lastUpdateDate.toLocaleDateString(undefined, dateOptions);
+            document.getElementById('last-updated').textContent = formattedDate;
+            
+            // Get and display timezone
+            const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            document.getElementById('timezone').textContent = timezone;
+        }
+        
+        // Display the last update time when page loads
+        displayLastUpdate();
+    </script>
 </body>
 </html>
